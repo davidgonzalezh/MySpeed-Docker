@@ -1,0 +1,35 @@
+# Git, automatizacion y archivos de editor no forman parte de la imagen.
+.git
+.github
+.idea
+.vscode
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Nunca enviar configuracion local o secretos al contexto de build.
+.env
+.env.*
+!.env.example
+
+# Dependencias y salidas se reconstruyen dentro de las etapas Docker.
+node_modules
+client/node_modules
+build
+client/build
+coverage
+
+# Estado runtime y copias de seguridad no deben entrar a la imagen/cache.
+data
+bin
+backups
+MySpeed
+MySpeed.exe
+
+# Sitio/documentacion no son necesarios para compilar la aplicacion.
+docs
+*.md
+
+# Los lockfiles NO se ignoran: hacen posible --frozen-lockfile.
+*.log

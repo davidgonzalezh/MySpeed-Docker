@@ -1,0 +1,82 @@
+# MySpeed Docker Classroom Edition
+#
+# Inicio normal:
+#   cp .env.example .env
+#   docker compose config
+#   docker compose up -d --build
+#
+# Compose lee automaticamente el archivo .env del mismo directorio para
+# sustituir ${VARIABLES}. No se usa "env_file", por lo que el .env completo no
+# entra al contenedor: solo se pasan las claves declaradas en "environment".
+#
+# RED: el valor predeterminado 0.0.0.0 publica MySpeed en todas las interfaces
+# IPv4 del host. Asi se puede entrar desde otro equipo mediante
+# http://IP_DEL_SERVIDOR:5216. Esto NO abre el firewall, el router/NAT, un grupo
+# de seguridad cloud, DNS ni TLS. Lee docs/05-acceso-externo-y-seguridad.md antes
+# de exponer el servicio fuera de una red de laboratorio autorizada.
+
+services:
+  myspeed:
+    # Nombre/tag local de la imagen. Se puede cambiar con MYSPEED_IMAGE.
+    image: "${MYSPEED_IMAGE:-myspeed:local}"
+
+    # La imagen se construye desde este mismo repositorio; no depende de una
+    # imagen publicada por el proyecto oficial.
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        # Etiqueta informativa OCI; no modifica la version de MySpeed.
+        APP_VERSION: "${APP_VERSION:-1.0.9-docker}"
+
+    # Tini actua como PID 1 y reenvia senales al proceso Bun.
+    init: true
+
+    # Reinicia tras fallos o reinicios del daemon, excepto si se detuvo a mano.
+    restart: "${MYSPEED_RESTART_POLICY:-unless-stopped}"
+
+    ports:
+      # Formato: IP_HOST:PUERTO_HOST:PUERTO_CONTENEDOR.
+      # 0.0.0.0 permite acceso desde las interfaces IPv4 del host.
+      - "${MYSPEED_BIND_IP:-0.0.0.0}:${MYSPEED_HTTP_PORT:-5216}:5216"
+
+      # 5217 solo respondera si existen data/certs/cert.pem y key.pem validos.
+      # Publicar el puerto no activa HTTPS por si solo.
+      - "${MYSPEED_BIND_IP:-0.0.0.0}:${MYSPEED_HTTPS_PORT:-5217}:5217"
+
+    environment:
+      # Variables que recibe realmente la aplicacion dentro del contenedor.
+      TZ: "${TZ:-Etc/UTC}"
+      SERVER_PORT: "5216"
+      HTTPS_PORT: "5217"
+      RUN_TEST_ON_STARTUP: "${RUN_TEST_ON_STARTUP:-false}"
+
+      # SQLite es la opcion autocontenida. MySQL es avanzado y requiere un
+      # servidor accesible, ademas de DB_NAME, DB_USER y DB_PASS.
+      DB_TYPE: "${DB_TYPE:-sqlite}"
+      DB_HOST: "${DB_HOST:-}"
+      DB_NAME: "${DB_NAME:-}"
+      DB_USER: "${DB_USER:-}"
+      DB_PASS: "${DB_PASS:-}"
+
+      # El modo preview es solo demostrativo: usa otra BD, evita descargar los
+      # CLI y restringe cambios. No es un mecanismo de seguridad productivo.
+      PREVIEW_MODE: "${PREVIEW_MODE:-false}"
+      PREVIEW_MESSAGE: "${PREVIEW_MESSAGE:-}"
+
+    volumes:
+      # Volumen nombrado: conserva BD SQLite, configuracion, pruebas, logs,
+      # listas de servidores y certificados aunque se recree el contenedor.
+      - myspeed-data:/myspeed/data
+
+    # Impide que el proceso gane privilegios adicionales dentro del contenedor.
+    security_opt:
+      - no-new-privileges:true
+
+    # Docker espera hasta 30 s tras SIGTERM antes de forzar la finalizacion.
+    stop_grace_period: 30s
+
+volumes:
+  # Compose antepone el nombre del proyecto, evitando colisiones entre alumnos.
+  # "docker compose down" lo conserva; "docker compose down -v" lo elimina.
+  myspeed-data: {}

@@ -1,0 +1,32 @@
+# Configuracion local y secretos
+.env
+.env.*
+!.env.example
+
+# Dependencias
+/node_modules/
+/client/node_modules/
+
+# Artefactos generados
+/build/
+/client/build/
+/server/migrations/index.js
+/server/integrations/index.js
+/server/clientEmbed.js
+/data/
+/bin/
+/backups/
+/MySpeed
+/MySpeed.exe
+
+# Editores y sistema operativo
+/.idea/
+/.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Informes y logs
+/coverage/
+*.log
