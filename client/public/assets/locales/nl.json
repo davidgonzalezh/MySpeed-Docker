@@ -1,0 +1,587 @@
+{
+  "failed": "Mislukt",
+  "welcome": {
+    "step": "Stap",
+    "title": "Welkom bij MySpeed!",
+    "subtext": "Laten we MySpeed voor de eerste keer instellen. Maak je geen zorgen, het duurt niet lang.",
+    "provider_title": "Kies een aanbieder",
+    "provider_subtext": "Selecteer hier de provider die je wilt gebruiken. Deze provider zal dan je tests uitvoeren.",
+    "data_title": "Stel optimale gegevens in",
+    "data_subtext": "Selecteer je contractueel overeengekomen snelheden in deze stap",
+    "ms": "(in ms)",
+    "mbps": "(in Mbps)",
+    "accept_title": "Accepteer de voorwaarden",
+    "accept_subtext": "In deze stap willen we je informeren over de Ookla licentie. Lees het en bevestig dat je het gelezen en geaccepteerd hebt door op \"Gereed\" te klikken."
+  },
+  "dialog": {
+    "okay": "Oké",
+    "done": "Klaar",
+    "continue": "Ga verder",
+    "apply": "Ja, neem over",
+    "update": "Vernieuwen",
+    "close": "Sluit",
+    "unset": "Verwijder",
+    "retry": "Probeer het opnieuw",
+    "login": "Inloggen",
+    "save": "Opslaan",
+    "saving": "Opslaan...",
+    "password": {
+      "title": "Wachtwoord vereist",
+      "placeholder": "Uw wachtwoord",
+      "wrong": "Het ingevoerde wachtwoord is onjuist",
+      "unlock": "Ontgrendel"
+    },
+    "api": {
+      "title": "API niet toegankelijk",
+      "description": "MySpeed kon de API van deze instantie niet bereiken. Probeer het later opnieuw."
+    },
+    "provider": {
+      "interface": "Interface",
+      "server": "Server",
+      "server_id": "Server-ID",
+      "custom_url": "Aangepaste URL",
+      "custom_url_placeholder": "https://speed.test/backend/",
+      "choose_automatically": "Automatisch kiezen",
+      "ookla_license": "Ik heb de <Eula>EULA</Eula>, <GDPR>het privacybeleid</GDPR> en <TOS>de servicevoorwaarden</TOS> van Ookla gelezen en accepteer deze.",
+      "ookla_notice": "Door Oowa te gebruiken, gaat u akkoord met hun <Eula>EULA</Eula>, <GDPR>privacy policy</GDPR> and <TOS>Terms of Service</TOS>.",
+      "ookla_desc": "Populaire provider met globaal servernetwerk",
+      "libre_desc": "Open-source, zelforganisatie snelheidstest",
+      "cloudflare_desc": "Snel CDN-gebaseerd testen"
+    }
+  },
+  "dropdown": {
+    "settings": "Instellingen",
+    "changes_applied": "De wijzigingen zijn opgeslagen.",
+    "language_changed": "De taal is veranderd.",
+    "provider_changed": "De provider is gewijzigd.",
+    "changes_unsaved": "Je wijzigingen zijn niet geaccepteerd. Controleer je invoer.",
+    "invalid": "Invoer ongeldig",
+    "ping": "Optimale ping",
+    "upload": "Optimale snelheid",
+    "download": "Optimale daalsnelheid",
+    "recommendations": "Optimale waarden",
+    "optimal_values": "Optimale waarden",
+    "change_provider": "Verander van leverancier",
+    "password": "Wachtwoord wijzigen",
+    "cron": "Frequentie instellen",
+    "time": "Ingestelde periode",
+    "storage": "Opslag beheren",
+    "pause_tests": "Pauzetests",
+    "resume_tests": "Doorgaan met testen",
+    "language": "Taal wijzigen",
+    "light_mode": "Lichtmodus",
+    "dark_mode": "Donkere modus",
+    "theme_switched_light": "Overgeschakeld op lichtmodus",
+    "theme_switched_dark": "Overgeschakeld naar donkere modus",
+    "preferences": "named@@0",
+    "provider": "Over de provider",
+    "integrations": "Integraties"
+  },
+  "about": {
+    "title": "Over MySpeed",
+    "description": "MySpeed is een open-source snelheidstest analysesoftware die uw internet snelheid registreert over een configureerbare periode.",
+    "github": "GitHub",
+    "website": "website",
+    "donate": "Doneren",
+    "translate": "Vertalen",
+    "made_by": "Gemaakt met"
+  },
+  "options": {
+    "cron": {
+      "continuous": "Doorlopend",
+      "continuous_desc": "Elke minuut - hoog gebruik van grondstoffen",
+      "frequent": "Heel vaak",
+      "frequent_desc": "Elke 30 minuten",
+      "default": "Standaard",
+      "default_desc": "Elk uur - aanbevolen",
+      "rare": "Zelden",
+      "rare_desc": "Elke 3 uur",
+      "really_rare": "Heel zelden",
+      "really_rare_desc": "Elke 6 uur"
+    },
+    "level": {
+      "no_access": "Geen toegang",
+      "read_access": "Alleen-lezen toegang"
+    }
+  },
+  "password": {
+    "no_access_desc": "Bezoekers moeten het wachtwoord invoeren om iets te bekijken",
+    "read_access_desc": "Bezoekers kunnen gegevens bekijken maar kunnen de instellingen niet wijzigen"
+  },
+  "pause": {
+    "manual": "Onbepaalde tijd pauzeren",
+    "manual_desc": "Pauzeren tot handmatig hervat",
+    "short": "Korte Breek",
+    "short_desc": "Pauze gedurende 1 uur",
+    "medium": "Medium Breek",
+    "medium_desc": "Pauze voor 6 uur",
+    "long": "Lange Breek",
+    "long_desc": "Pauzeer gedurende 12 uur",
+    "custom": "Aangepaste duur"
+  },
+  "page": {
+    "overview": "Overzicht",
+    "statistics": "Statistieken"
+  },
+  "update": {
+    "ping_title": "Optimale ping instellen (ms)",
+    "ping_placeholder": "Ping (ms)",
+    "upload_title": "Optimale snelheid instellen (Mbit/s)",
+    "upload_placeholder": "Omhoog snelheid (Mbit/s)",
+    "download_title": "Optimale downsnelheid instellen (Mbit/s)",
+    "download_placeholder": "Neerwaartse snelheid (Mbit/s)",
+    "recommendations_title": "Optimale aanbevelingen",
+    "recommendations_set": "Automatische aanbevelingen instellen?",
+    "provider_title": "Snelheidstest-provider instellen",
+    "manually": "Handmatig instellen",
+    "new_password": "Nieuw wachtwoord instellen",
+    "password_placeholder": "Nieuw wachtwoord",
+    "password_removed": "De wachtwoordvergrendeling is verwijderd en het ingestelde wachtwoord is verwijderd.",
+    "level": "Niveau wijzigen",
+    "level_title": "Rechten voor bezoekers",
+    "cron_title": "Testfrequentie instellen",
+    "cron_rules": "Cron-regel",
+    "cron_next_test": "Volgende test:",
+    "custom_cron": "Aangepaste cron expressie",
+    "schedule_offset": "Verschuiving schema",
+    "schedule_offset_desc": "Voegt een kleine vertraging toe om te voorkomen dat testen op exacte tijdstippen starten",
+    "advanced": "Geavanceerd",
+    "time_title": "Tests van de laatste ...",
+    "download": "Downloaden",
+    "pause_title": "Snelheidstests pauzeren voor...",
+    "hours": "Uren",
+    "pause": "Pauze",
+    "pause_manual_hint": "Laat leeg om voor onbepaalde tijd te pauzeren",
+    "release_manually": "Handmatig loslaten",
+    "language": "Taal wijzigen",
+    "view_title": "Weergave wijzigen"
+  },
+  "header": {
+    "title": "MySpeed",
+    "running_tooltip": "Snelheidstest wordt uitgevoerd",
+    "start_tooltip": "Snelheidstest starten",
+    "new_update": "Update beschikbaar",
+    "download": "Downloaden",
+    "paused": "Snelheidstests zijn momenteel gepauzeerd. Ga door als je er een wilt doen.",
+    "running": "Er wordt al een snelheidstest uitgevoerd. Een ogenblik geduld alstublieft.",
+    "admin_login": "Beheerderslogin",
+    "servers": "Servers",
+    "beta": {
+      "title": "Beta-versie",
+      "description": "Deze functie is nog in betafase. Als je bugs vindt, meld ze dan <Link>hier</Link>."
+    }
+  },
+  "storage": {
+    "speedtests": "Snelheidstests",
+    "configuration": "Configuratie",
+    "stored_tests": "Opgeslagen tests",
+    "tests": "Tests",
+    "export_tests": "Tests exporteren",
+    "tests_exported": "De tests zijn geëxporteerd",
+    "csv": "CSV",
+    "json": "JSON",
+    "import_tests": "Tests importeren",
+    "tests_imported": "De tests zijn geïmporteerd",
+    "import_test_error": "Er is een fout opgetreden tijdens het importeren van de tests",
+    "import_config_error": "Er is een fout opgetreden tijdens het importeren van de configuratie",
+    "export": "Exporteer",
+    "import": "Importeren",
+    "clear_history": "Geschiedenis wissen",
+    "history_cleared": "De geschiedenis is gewist",
+    "delete": "Verwijder",
+    "confirm_delete": "Ja, verwijderen",
+    "export_settings": "Instellingen exporteren",
+    "import_settings": "Instellingen importeren",
+    "factory_reset": "Fabrieksreset",
+    "factory_reset_completed": "De fabrieksreset is voltooid",
+    "reset": "Reset",
+    "confirm_reset": "Ja, opnieuw instellen",
+    "settings_exported": "De instellingen zijn geëxporteerd",
+    "settings_imported": "De instellingen zijn geïmporteerd",
+    "retention": "Behoud van gegevens",
+    "retention_desc": "Hoe lang de snelheidstest resultaten worden bewaard voordat ze automatisch worden verwijderd.",
+    "retention_saved": "Behoud periode bijgewerkt",
+    "retention_days_placeholder": "365",
+    "retention_days_suffix": "Dagen",
+    "retention_back": "Terug naar voorinstellingen",
+    "retention_options": {
+      "week": "7 dagen",
+      "month": "30 dagen",
+      "quarter": "90 dagen",
+      "half_year": "180 dagen",
+      "year": "1 jaar (standaard)",
+      "forever": "Voor altijd houden",
+      "custom": "Aangepast..."
+    }
+  },
+  "latest": {
+    "ping": "Ping",
+    "ping_unit": "ms",
+    "jitter": "Jitter",
+    "jitter_unit": "ms",
+    "down": "Downloaden",
+    "speed_unit": "Mbit/s",
+    "byte_speed_unit": "MB/s",
+    "up": "Uploaden",
+    "latest": "Laatste test",
+    "before": "van"
+  },
+  "info": {
+    "recommendations_error": "Je moet minstens 10 tests doen zodat je een gemiddelde kunt bepalen. Het maakt niet uit of de tests handmatig of automatisch zijn uitgevoerd.",
+    "recommendations_info": "Op basis van de laatste 10 testresultaten bleek dat de optimale ping <Bold>{{ping}} ms</Bold> was, de download <Bold>{{down}} Mbit/s</Bold> en de upload op <Bold>{{up}} Mbit/s</Bold>. Je kunt het beste je internetcontract als richtlijn gebruiken en het alleen overnemen als het overeenkomt.",
+    "update": "Er is een update voor versie {{version}} beschikbaar. Zie <Changes>de wijzigingen</Changes> en <DLLink>download de update</DLLink>.",
+    "down": {
+      "title": "Downloadsnelheid",
+      "description": "Downloadsnelheid beïnvloedt je surfervaring. Hoe meer je downloadt, hoe sneller je computer gegevens kan ontvangen."
+    },
+    "ping": {
+      "title": "Ping",
+      "description": "De ping geeft aan hoe snel de betreffende provider reageert. Hoe korter de tijd, hoe beter."
+    },
+    "jitter": {
+      "title": "Jitter",
+      "description": "Jitter is de variatie in ping-responstijden. Lagere jitter betekent een stabielere verbinding, wat belangrijk is voor real-time applicaties zoals videogesprekken en gaming."
+    },
+    "up": {
+      "title": "Uploadsnelheid",
+      "description": "Uploadsnelheid beïnvloedt je surfervaring. Hoe meer u krijgt, hoe sneller uw computer gegevens kan verzenden."
+    },
+    "latest": {
+      "title": "Laatste test",
+      "description": "Dit is de tijd die aangeeft wanneer de laatste test is uitgevoerd. In dit geval vond de laatste plaats op <Bold>{{date}}</Bold> om <Bold>{{time}}</Bold>."
+    }
+  },
+  "time": {
+    "now": "Zojuist",
+    "seconds": "{{seconds}} seconden",
+    "minute": "1 minuut",
+    "minutes": "{{minutes}} minuten",
+    "hour": "1 uur",
+    "hours": "{{hours}} uur",
+    "day": "1 day",
+    "days": "{{days}} days",
+    "on": "Op",
+    "at": "Op"
+  },
+  "test": {
+    "not_available": "Er zijn momenteel geen tests beschikbaar",
+    "no_latest": "Er is geen huidige test. Voer een test uit of wacht tot de volgende test is uitgevoerd.",
+    "loading_more": "Meer tests laden...",
+    "no_more_tests": "Geen tests meer om te laden",
+    "unknown_error": "Onbekende fout:",
+    "failed": "Test mislukt",
+    "recheck": "Controleer voor zover mogelijk of dit vaker gebeurt.",
+    "delete": "Test verwijderen",
+    "deleted": "De test is verwijderd",
+    "average": {
+      "title": "Gemiddelde snelheid",
+      "description": "<Bold>{{amount}}</Bold> Tests hebben uitgewezen dat op <Bold>{{date}}</Bold> een gemiddelde downloadsnelheid van <Bold>{{down}} Mbit/s</Bold> en een uploadsnelheid van <Bold>{{up}} Mbit/s</Bold> werd gehaald. De tests duurden gemiddeld <Bold>{{duration}} seconden</Bold>."
+    },
+    "result": {
+      "title": "Testresultaat",
+      "description": "<Link>Deze test</Link> behaalde een maximale downloadsnelheid van <Bold>{{down}} Mbps</Bold> en een maximale uploadsnelheid van <Bold>{{up}} Mbps</Bold>. Hij werd gemaakt <Bold>{{type}}</Bold> en duurde <Bold>{{duration}} Seconden</Bold>.",
+      "jitter": " De jitter voor de verbinding was <Bold>{{jitter}} ms</Bold>.",
+      "from_you": "van jou",
+      "automatic": "automatisch"
+    },
+    "overview": {
+      "title_range": "Test overzicht van {{from}} naar {{to}}"
+    }
+  },
+  "errors": {
+    "network_unreachable": "De internetverbinding was instabiel tijdens de duur van de test",
+    "took_too_long": "De test duurde te lang en werd geannuleerd",
+    "no_permission": "MySpeed heeft geen autorisatie om deze test te starten",
+    "resource_unavailable": "De test kon niet worden uitgevoerd omdat de bron tijdelijk niet beschikbaar was",
+    "no_route": "De test kon niet worden uitgevoerd omdat er geen route naar de host bestond",
+    "connection_refused": "De test kon niet worden uitgevoerd omdat de verbinding werd geweigerd",
+    "timed_out": "De internetverbinding was instabiel tijdens de duur van de test",
+    "config": "Het configuratiebestand kon niet worden geladen",
+    "invalid_view": "Ongeldige weergave"
+  },
+  "statistics": {
+    "average": "Gemiddeld",
+    "export": {
+      "button": "Exporteren"
+    },
+    "overview": {
+      "total_title": "Totaal testen",
+      "total_description": "Het aantal uitgevoerde tests",
+      "failed_title": "Mislukte tests",
+      "failed_description": "Het aantal mislukte tests",
+      "average_title": "Gemiddelde duur",
+      "average_description": "De gemiddelde duur van de tests"
+    },
+    "failed": {
+      "title": "Mislukte tests",
+      "success": "Succesvol",
+      "failed": "Mislukt",
+      "label": "Tests"
+    },
+    "speed": {
+      "title": "Snelheid"
+    },
+    "manual": {
+      "title": "Handmatige tests",
+      "yes": "Handmatig gemaakt",
+      "no": "Automatisch aangemaakt"
+    },
+    "duration": {
+      "title": "Duur van de test",
+      "label": "Aantal"
+    },
+    "values": {
+      "min": "Laagste",
+      "max": "Hoogste",
+      "avg": "Gemiddeld",
+      "down": "Waarden downloaden",
+      "up": "Waarden uploaden"
+    },
+    "failed_test": "Mislukte test",
+    "hourly": {
+      "title": "Snelheid op dag",
+      "sample_count": "Testen"
+    },
+    "consistency": {
+      "title": "Connectie stabiliteit",
+      "excellent": "Uitstekend",
+      "good": "goed",
+      "fair": "Redelijk",
+      "poor": "Onvoldoende",
+      "ping_variance": "Ping variatie"
+    }
+  },
+  "calendar": {
+    "select_range": "Selecteer datumbereik",
+    "select_start": "Selecteer startdatum",
+    "select_end": "Selecteer einddatum",
+    "from": "van",
+    "to": "tot",
+    "last_7_days": "Afgelopen 7 dagen",
+    "last_30_days": "Laatste 30 dagen",
+    "last_90_days": "Last 90 Days",
+    "last_year": "Vorig jaar",
+    "mon": "Mon",
+    "tue": "di",
+    "wed": "woe",
+    "thu": "Thu",
+    "fri": "vr",
+    "sat": "za",
+    "sun": "zo"
+  },
+  "nodes": {
+    "add": "Server toevoegen",
+    "create": "Voeg toe",
+    "this_server": "Deze server",
+    "created": "De server is succesvol toegevoegd",
+    "password_required": "Voor dit knooppunt is een wachtwoord vereist",
+    "update_password": "Werk het wachtwoord van dit knooppunt bij",
+    "password_outdated": "Wachtwoord verouderd",
+    "password_updated": "Het wachtwoord is succesvol bijgewerkt",
+    "preview_active": "Het toevoegen en verwijderen van servers is uitgeschakeld in demomodus.",
+    "placeholder": {
+      "name": "MySpeed instantie",
+      "url": "https://uw-server.nt"
+    },
+    "group": {
+      "name": "Naam server",
+      "url": "Adres server"
+    },
+    "delete": {
+      "title": "Server verwijderen",
+      "description": "De server <Bold>{{name}}</Bold> (#{{id}}) is verwijderd. Deze actie kan niet ongedaan worden gemaakt. Wilt u doorgaan?",
+      "yes": "Ja, verwijderen",
+      "success": "De server is succesvol verwijderd"
+    },
+    "rename": {
+      "title": "Server hernoemen",
+      "placeholder": "Nieuwe servernaam",
+      "success": "De server is met succes hernoemd"
+    },
+    "messages": {
+      "not_reachable": "Server is niet bereikbaar",
+      "password_changed": "Wachtwoord is gewijzigd",
+      "tests_pending": "Testresultaten in behandeling"
+    }
+  },
+  "preview": {
+    "title": "Demonstratie modus",
+    "info": "DEMO",
+    "description": "U bent momenteel in demo-modus. Sommige functies zijn uitgeschakeld en sommige instellingen kunnen niet worden gewijzigd. Als u alle functies wilt gebruiken, kunt u <Link>MySpeed</Link> installeren op uw eigen server."
+  },
+  "integrations": {
+    "none_active": "Deze integratie is niet actief. <br/><Bold>Voeg toe</Bold>",
+    "preview_active": "Integraties zijn uitgeschakeld in demomodus.",
+    "display_name": "Naam integratie",
+    "create": "Voeg toe",
+    "activity": {
+      "never_executed": "Nooit uitgevoerd",
+      "last_run": "Laatst voor "
+    },
+    "discord": {
+      "title": "Discord",
+      "fields": {
+        "url": "Webhook URL",
+        "url_placeholder": "https://discord.com/api/webhooks/...",
+        "display_name": "Naam weergeven",
+        "display_name_placeholder": "MySpeed-melding",
+        "error_message": "Foutmelding",
+        "error_message_placeholder": "[%year%-%month%-%day% %hour%:%minute%] fout: %error%",
+        "send_failed": "Foutberichten verzenden",
+        "send_finished": "Volledig ingevuld verzenden",
+        "finished_message": "Voltooid bericht",
+        "finished_message_placeholder": "%year%-%month%-%day% %hour%:%minute% — %ping% ms, %download% Mbps, %upload% Mbps"
+      }
+    },
+    "gotify": {
+      "title": "Gotify",
+      "fields": {
+        "url": "Server URL",
+        "key": "Toepassen token",
+        "priority": "Prioriteit",
+        "error_message": "Foutmelding",
+        "error_message_placeholder": "[%year%-%month%-%day% %hour%:%minute%] fout: %error%",
+        "send_failed": "Foutberichten verzenden",
+        "send_finished": "Volledig ingevuld verzenden",
+        "finished_message": "Voltooid bericht",
+        "finished_message_placeholder": "%year%-%month%-%day% %hour%:%minute% — %ping% ms, %download% Mbps, %upload% Mbps"
+      }
+    },
+    "pushover": {
+      "title": "Pushover",
+      "fields": {
+        "token": "App-token",
+        "user_key": "Gebruikers sleutel",
+        "error_message": "Foutmelding",
+        "error_message_placeholder": "[%year%-%month%-%day% %hour%:%minute%] fout: %error%",
+        "send_failed": "Foutmeldingen verzenden",
+        "send_finished": "Voltooide berichten verzenden",
+        "finished_message": "Voltooid bericht",
+        "finished_message_placeholder": "%year%-%month%-%day% %hour%:%minute% — %ping% ms, %download% Mbps, %upload% Mbps"
+      }
+    },
+    "healthChecks": {
+      "title": "HealthChecks",
+      "fields": {
+        "url": "URL gezondheidscontrole",
+        "url_placeholder": "https://hc-ping.com/<uuid>",
+        "interval": "Ping interval (minuten)",
+        "interval_placeholder": "1"
+      }
+    },
+    "influxdb": {
+      "title": "InfluxDB",
+      "fields": {
+        "url": "Server-URL",
+        "url_placeholder": "http://localhost:8086",
+        "org": "Rekening",
+        "bucket": "Emmer",
+        "token": "API token",
+        "measurement": "Naam meting",
+        "measurement_placeholder": "snelheids (standaard)",
+        "host": "Host label",
+        "host_placeholder": "Standaard de hostnaam van de machine",
+        "tags": "Extra tags",
+        "tags_placeholder": "region=eu,role=primair (komma-gescheiden)"
+      }
+    },
+    "ntfy": {
+      "title": "kant-en-klare",
+      "fields": {
+        "url": "Server-URL",
+        "url_placeholder": "https://ntfy.sh",
+        "topic": "Onderwerp",
+        "topic_placeholder": "myspeed-meldingen",
+        "token": "Toegangstoken token",
+        "token_placeholder": "tk_... (optioneel, voor beschermde servers)",
+        "title": "Notificatie titel",
+        "title_placeholder": "MySpeed (optioneel)",
+        "tags": "Labels",
+        "tags_placeholder": "waarschuwing, satelliet (komma gescheiden)",
+        "priority": "Standaard prioriteit (1-5)",
+        "priority_placeholder": "3",
+        "error_priority": "Foutprioriteit (1-5)",
+        "error_priority_placeholder": "5",
+        "error_message": "Foutmelding",
+        "error_message_placeholder": "[%year%-%month%-%day% %hour%:%minute%] fout: %error%",
+        "send_failed": "Foutmeldingen verzenden",
+        "send_finished": "Verstuur voltooide berichten",
+        "finished_message": "Voltooid bericht",
+        "finished_message_placeholder": "%year%-%month%-%day% %hour%:%minute% — %ping% ms, %download% Mbps, %upload% Mbps"
+      }
+    },
+    "telegram": {
+      "title": "Telegram",
+      "fields": {
+        "token": "Bot Token",
+        "chat_id": "Chat-ID",
+        "error_message": "Foutmelding",
+        "error_message_placeholder": "[%year%-%month%-%day% %hour%:%minute%] fout: %error%",
+        "send_failed": "Foutberichten verzenden",
+        "send_finished": "Volledig ingevuld verzenden",
+        "finished_message": "Voltooid bericht",
+        "finished_message_placeholder": "%year%-%month%-%day% %hour%:%minute% — %ping% ms, %download% Mbps, %upload% Mbps"
+      }
+    },
+    "webhook": {
+      "title": "Webhook",
+      "fields": {
+        "url": "Webhook URL",
+        "url_placeholder": "https://uw-server.nt/hook",
+        "send_started": "Gestart met verzenden",
+        "send_failed": "Foutberichten verzenden",
+        "send_finished": "Volledig ingevuld verzenden",
+        "send_alive": "Stuur levendige berichten",
+        "send_recommendations": "Stuur aanbevelingen",
+        "send_config_updates": "Configuratie-updates verzenden",
+        "interval": "Keep-Alive interval (minuten)",
+        "interval_placeholder": "1"
+      }
+    }
+  },
+  "common": {
+    "back_to_top": "Terug naar boven"
+  },
+  "not_found": {
+    "title": "Pagina niet gevonden",
+    "description": "De pagina die je zoekt bestaat niet of is verplaatst.",
+    "back_home": "Terug naar startpagina"
+  },
+  "route_error": {
+    "title": "Oeps!",
+    "subtitle": "Er ging iets mis",
+    "description": "Er is een onverwachte fout opgetreden. Probeer het opnieuw of ga terug naar de startpagina.",
+    "reload": "Pagina opnieuw laden"
+  },
+  "optimal_values": {
+    "title": "Optimale waarden",
+    "use_recommended": "Gebruik aanbevolen"
+  },
+  "preferences": {
+    "title": "named@@0",
+    "theme": {
+      "title": "Uiterlijk",
+      "description": "Schakel tussen donker en licht interface.",
+      "dark": "Donker",
+      "dark_desc": "Makkelijker op de ogen in licht",
+      "light": "Licht",
+      "light_desc": "Heldere look voor overdag gebruik"
+    },
+    "time_format": {
+      "title": "Tijd formaat",
+      "description": "Hoe kloktijden worden weergegeven in de app.",
+      "h24": "24-uurs",
+      "h24_desc": "Weergavetijden zoals 14:30",
+      "h12": "12-uur",
+      "h12_desc": "Weergave tijden zoals 2:30 uur"
+    },
+    "speed_unit": {
+      "title": "Snelheid eenheid",
+      "description": "Kies hoe snelheden worden weergegeven. Waarden worden automatisch geconverteerd.",
+      "mbps": "Mbps (Megabits per seconde)",
+      "mbps_desc": "Standaard ISP / snelheidstest eenheid",
+      "mbytes": "MB/s (Megabytes per seconde)",
+      "mbytes_desc": "Veelvoorkomende browsers en downloadmanagers"
+    }
+  }
+}

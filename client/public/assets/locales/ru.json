@@ -1,0 +1,587 @@
+{
+  "failed": "Ошибка",
+  "welcome": {
+    "step": "Шаг",
+    "title": "Добро пожаловать в MySpeed!",
+    "subtext": "Давай настроим MySpeed для первого раза. Не волнуйся, это не займет много времени.",
+    "provider_title": "Выберите провайдера",
+    "provider_subtext": "Выбери здесь провайдера, услугами которого ты хочешь воспользоваться. Этот провайдер затем будет выполнять твои тесты.",
+    "data_title": "Установи оптимальные данные",
+    "data_subtext": "Выберите скорость, оговоренную в контракте, на этом шаге",
+    "ms": "(в мс)",
+    "mbps": "(в Мбит/с)",
+    "accept_title": "Прими условия",
+    "accept_subtext": "На этом шаге мы хотели бы проинформировать тебя о лицензии Ookla. Ознакомься с ней и подтверди, что ты прочитал и принял ее, нажав на кнопку \"Готово\"."
+  },
+  "dialog": {
+    "okay": "Хорошо",
+    "done": "Готовый",
+    "continue": "Продолжай",
+    "apply": "Да, применить",
+    "update": "Обновление",
+    "close": "Закрыть",
+    "unset": "Удалить",
+    "retry": "Попробуйте еще раз",
+    "login": "Войти",
+    "save": "Сохранить",
+    "saving": "Сохранение...",
+    "password": {
+      "title": "Требуется пароль",
+      "placeholder": "Ваш пароль",
+      "wrong": "Введенный вами пароль неверен",
+      "unlock": "Разблокировать"
+    },
+    "api": {
+      "title": "API недоступен",
+      "description": "MySpeed не смог связаться с API этого экземпляра. Пожалуйста, повторите попытку позже."
+    },
+    "provider": {
+      "interface": "Интерфейс",
+      "server": "Сервер",
+      "server_id": "Идентификатор сервера",
+      "custom_url": "Пользовательский URL",
+      "custom_url_placeholder": "https://speed.test/backend/",
+      "choose_automatically": "Выбирай автоматически",
+      "ookla_license": "Я прочитал и принимаю <Eula>EULA</Eula>, <GDPR>политику конфиденциальности</GDPR> и <TOS>условия обслуживания</TOS> Ookla.",
+      "ookla_notice": "Используя Ookla, вы соглашаетесь с их <Eula>EULA</Eula>, <GDPR>политикой конфиденциальности</GDPR> и <TOS>условиями обслуживания</TOS>.",
+      "ookla_desc": "Популярный провайдер с глобальной сетью серверов",
+      "libre_desc": "Открытый исходный код, самохонируемый speedtest",
+      "cloudflare_desc": "Быстрое тестирование на CDN"
+    }
+  },
+  "dropdown": {
+    "settings": "Настройки",
+    "changes_applied": "Изменения были сохранены.",
+    "language_changed": "Язык был изменен.",
+    "provider_changed": "Провайдер был изменен.",
+    "changes_unsaved": "Ваши изменения не были приняты. Проверьте введенные данные.",
+    "invalid": "Некорректный ввод",
+    "ping": "Оптимальный пинг",
+    "upload": "Оптимальная скорость передачи",
+    "download": "Оптимальная скорость приема",
+    "recommendations": "Оптимальные значения",
+    "optimal_values": "Оптимальные значения",
+    "change_provider": "Смените поставщика услуг",
+    "password": "Изменить пароль",
+    "cron": "Установить частоту",
+    "time": "Установить период",
+    "storage": "Управляй хранилищем",
+    "pause_tests": "Приостановить тесты",
+    "resume_tests": "Продолжить тесты",
+    "language": "Изменить язык",
+    "light_mode": "Светлый режим",
+    "dark_mode": "Темный режим",
+    "theme_switched_light": "Включен светлый режим",
+    "theme_switched_dark": "Включен темный режим",
+    "preferences": "Настройки",
+    "provider": "О провайдере",
+    "integrations": "Интеграции"
+  },
+  "about": {
+    "title": "О MySpeed",
+    "description": "MySpeed - это программа для анализа скоростей с открытым исходным кодом, которая записывает вашу скорость в течение настраиваемого периода времени.",
+    "github": "GitHub",
+    "website": "Сайт",
+    "donate": "Пожертвовать",
+    "translate": "Перевести",
+    "made_by": "Сделано с"
+  },
+  "options": {
+    "cron": {
+      "continuous": "Непрерывно (каждую минуту)",
+      "continuous_desc": "Каждую минуту - большое использование ресурсов",
+      "frequent": "Очень часто (каждые 30 минут)",
+      "frequent_desc": "Каждые 30 минут",
+      "default": "По умолчанию (каждый час)",
+      "default_desc": "Каждый час - рекомендуется",
+      "rare": "Редко (каждые 3 часа)",
+      "rare_desc": "Каждые 3 часа",
+      "really_rare": "Очень редко (каждые 6 часов)",
+      "really_rare_desc": "Каждые 6 часов"
+    },
+    "level": {
+      "no_access": "Нет доступа",
+      "read_access": "Доступ только для чтения"
+    }
+  },
+  "password": {
+    "no_access_desc": "Посетители должны ввести пароль для просмотра",
+    "read_access_desc": "Посетители могут просматривать данные, но не могут изменить настройки"
+  },
+  "pause": {
+    "manual": "Пауза неопределенно",
+    "manual_desc": "Пауза до восстановления вручную",
+    "short": "Короткий перерыв",
+    "short_desc": "Пауза на 1 час",
+    "medium": "Средний перерыв",
+    "medium_desc": "Пауза на 6 часов",
+    "long": "Длинный перерыв",
+    "long_desc": "Пауза 12 часов",
+    "custom": "Пользовательская длительность"
+  },
+  "page": {
+    "overview": "Обзор",
+    "statistics": "Статистика"
+  },
+  "update": {
+    "ping_title": "Установите оптимальный пинг (мс)",
+    "ping_placeholder": "Пинг (мс)",
+    "upload_title": "Установите оптимальную скорость (Мбит/с)",
+    "upload_placeholder": "Скорость подъема (Мбит/с)",
+    "download_title": "Установите оптимальную скорость передачи данных (Мбит/с)",
+    "download_placeholder": "Скорость снижения (Мбит/с)",
+    "recommendations_title": "Оптимальные рекомендации",
+    "recommendations_set": "Установить автоматические рекомендации?",
+    "provider_title": "Установи провайдера speedtest",
+    "manually": "Установить вручную",
+    "new_password": "Установите новый пароль",
+    "password_placeholder": "Новый пароль",
+    "password_removed": "Блокировка пароля была снята, а установленный пароль удален.",
+    "level": "Уровень изменений",
+    "level_title": "Права для посетителей",
+    "cron_title": "Установите тестовую частоту",
+    "cron_rules": "Правило Cron",
+    "cron_next_test": "Следующий тест:",
+    "custom_cron": "Пользовательское выражение cron",
+    "schedule_offset": "Смещение графика",
+    "schedule_offset_desc": "Добавляет небольшую задержку, чтобы предотвратить запуск тестов в точное время",
+    "advanced": "Расширенные",
+    "time_title": "Показать тесты последних ...",
+    "download": "Скачать",
+    "pause_title": "Скоростные тесты приостанавливают...",
+    "hours": "Часы",
+    "pause": "Пауза",
+    "pause_manual_hint": "Оставьте пустым, чтобы приостановить на неопределенный срок",
+    "release_manually": "Освободить вручную",
+    "language": "Изменить язык",
+    "view_title": "Изменить вид"
+  },
+  "header": {
+    "title": "MySpeed",
+    "running_tooltip": "Выполнение теста скорости",
+    "start_tooltip": "Запустите тест скорости",
+    "new_update": "Доступно обновление",
+    "download": "Скачать",
+    "paused": "В настоящее время тестирование скорости приостановлено. Пожалуйста, продолжайте, если вы хотите пройти тест.",
+    "running": "Тест скорости уже проводится. Пожалуйста, подождите немного.",
+    "admin_login": "Логин администратора",
+    "servers": "Серверы",
+    "beta": {
+      "title": "Бета-версия",
+      "description": "Эта функция все еще находится на стадии бета-тестирования. Если вы обнаружите какие-либо ошибки, пожалуйста, сообщите о них <Link>здесь</Link>."
+    }
+  },
+  "storage": {
+    "speedtests": "Speedtests",
+    "configuration": "Конфигурация",
+    "stored_tests": "Хранимые тесты",
+    "tests": "Тесты",
+    "export_tests": "Экспортные тесты",
+    "tests_exported": "Тесты были экспортированы",
+    "csv": "CSV",
+    "json": "JSON",
+    "import_tests": "Импортные тесты",
+    "tests_imported": "Тесты были импортированы",
+    "import_test_error": "Возникла ошибка при импорте тестов",
+    "import_config_error": "Возникла ошибка при импорте конфигурации",
+    "export": "Экспорт",
+    "import": "Импорт",
+    "clear_history": "Чистая история",
+    "history_cleared": "История была очищена",
+    "delete": "Удалить",
+    "confirm_delete": "Да, удаляй",
+    "export_settings": "Настройки экспорта",
+    "import_settings": "Настройки импорта",
+    "factory_reset": "Заводской сброс",
+    "factory_reset_completed": "Сброс заводских настроек завершен",
+    "reset": "Перезагрузка",
+    "confirm_reset": "Да, сброс",
+    "settings_exported": "Настройки были экспортированы",
+    "settings_imported": "Настройки были импортированы",
+    "retention": "Удержание данных",
+    "retention_desc": "Как долго сохраняются результаты теста перед автоматическим удалением.",
+    "retention_saved": "Период хранения обновлён",
+    "retention_days_placeholder": "365",
+    "retention_days_suffix": "дней",
+    "retention_back": "Назад к пресетам",
+    "retention_options": {
+      "week": "7 дней",
+      "month": "30 дней",
+      "quarter": "90 дней",
+      "half_year": "180 дней",
+      "year": "1 год (по умолчанию)",
+      "forever": "Держать навсегда",
+      "custom": "Настроить..."
+    }
+  },
+  "latest": {
+    "ping": "Пинг",
+    "ping_unit": "ms",
+    "jitter": "Jitter",
+    "jitter_unit": "мс",
+    "down": "Скачать",
+    "speed_unit": "Mbit/s",
+    "byte_speed_unit": "МБ/с",
+    "up": "Загрузить",
+    "latest": "Последний тест",
+    "before": "с сайта"
+  },
+  "info": {
+    "recommendations_error": "Вы должны провести не менее 10 тестов, чтобы можно было определить среднее значение. Не имеет значения, были ли тесты проведены вручную или автоматически.",
+    "recommendations_info": "По результатам последних 10 тестов было установлено, что оптимальный пинг составляет <Bold>{{ping}} ms</Bold>, загрузка - <Bold>{{down}} Mbit/s</Bold>, а загрузка - <Bold>{{up}} Mbit/s</Bold>. Лучше всего использовать ваш договор на подключение к Интернету в качестве ориентира и принимать его только в том случае, если он совпадает.",
+    "update": "Доступно обновление до версии {{version}}. Смотрите <Changes>изменения</Changes> и <DLLink>скачать обновление</DLLink>.",
+    "down": {
+      "title": "Скорость загрузки",
+      "description": "Скорость загрузки влияет на удобство просмотра веб-страниц. Чем она больше, тем быстрее ваш компьютер получает данные."
+    },
+    "ping": {
+      "title": "Пинг",
+      "description": "Пинг показывает, как быстро отвечает соответствующий провайдер. Чем короче время, тем лучше."
+    },
+    "jitter": {
+      "title": "Jitter",
+      "description": "Jitter - это разновидность в ping response times. Нижний джиттер означает более стабильное соединение, которое важно для таких приложений как видеозвонки и игры в режиме реального времени."
+    },
+    "up": {
+      "title": "Скорость загрузки",
+      "description": "Скорость загрузки влияет на удобство просмотра веб-страниц. Чем она больше, тем быстрее ваш компьютер может передавать данные."
+    },
+    "latest": {
+      "title": "Последний тест",
+      "description": "Это время, которое показывает, когда была проведена последняя проверка. В данном случае последний тест был проведен <Bold>{{date}}</Bold> в <Bold>{{time}}</Bold>."
+    }
+  },
+  "time": {
+    "now": "Только что",
+    "seconds": "{{seconds}} секунды",
+    "minute": "1 минута",
+    "minutes": "{{minutes}} Протоколы",
+    "hour": "1 час",
+    "hours": "{{hours}} часов",
+    "day": "1 day",
+    "days": "{{days}} days",
+    "on": "На сайте",
+    "at": "На сайте"
+  },
+  "test": {
+    "not_available": "В настоящее время нет доступных тестов",
+    "no_latest": "Текущий тест отсутствует. Пожалуйста, выполните тест или подождите, пока не будет выполнен следующий тест.",
+    "loading_more": "Загрузить больше тестов...",
+    "no_more_tests": "Больше никаких тестов для загрузки",
+    "unknown_error": "Неизвестная ошибка:",
+    "failed": "Тест не прошел",
+    "recheck": "Пожалуйста, проверьте, насколько это возможно, если такое случается чаще.",
+    "delete": "Удалить тест",
+    "deleted": "Тест был удален",
+    "average": {
+      "title": "Средняя скорость",
+      "description": "<Bold>{{amount}}</Bold> Тесты показали, что на <Bold>{{date}}</Bold> средняя скорость загрузки <Bold>{{down}} Mbits/s</Bold> и скорость загрузки <Bold>{{up}} Mbits/s</Bold> была пройдена. Тесты длились в среднем <Bold>{{duration}} секунд</Bold>."
+    },
+    "result": {
+      "title": "Результат тестирования",
+      "description": "В <Link>этом тесте</Link> была достигнута максимальная скорость скачивания <Bold>{{down}} Мбит/с</Bold> и максимальная скорость загрузки <Bold>{{up}} Мбит/с</Bold>. Он был создан <Bold>{{type}}</Bold> и занял <Bold>{{duration}} секунд</Bold>.",
+      "jitter": " Триттер подключения был <Bold>{{jitter}} ms</Bold>.",
+      "from_you": "от тебя",
+      "automatic": "автоматический"
+    },
+    "overview": {
+      "title_range": "Обзор тестов с {{from}} до {{to}}"
+    }
+  },
+  "errors": {
+    "network_unreachable": "Интернет-соединение было нестабильным во время проведения теста",
+    "took_too_long": "Тест занял слишком много времени и был отменен",
+    "no_permission": "MySpeed не имеет разрешения на начало этого теста",
+    "resource_unavailable": "Тест не удалось выполнить, так как ресурс был временно недоступен",
+    "no_route": "Тест не может быть выполнен, потому что маршрут к хосту не существует",
+    "connection_refused": "Тест не может быть выполнен, потому что соединение было отклонено",
+    "timed_out": "Интернет-соединение было нестабильным во время проведения теста",
+    "config": "Не удалось загрузить файл конфигурации",
+    "invalid_view": "Недопустимый вид"
+  },
+  "statistics": {
+    "average": "Среднее",
+    "export": {
+      "button": "Экспорт"
+    },
+    "overview": {
+      "total_title": "Всего тестов",
+      "total_description": "Количество проведенных тестов",
+      "failed_title": "Неудачные тесты",
+      "failed_description": "Количество неудачных тестов",
+      "average_title": "Средняя продолжительность",
+      "average_description": "Средняя продолжительность испытаний"
+    },
+    "failed": {
+      "title": "Неудачные тесты",
+      "success": "Успешный",
+      "failed": "Не удалось",
+      "label": "Тесты"
+    },
+    "speed": {
+      "title": "Скорость"
+    },
+    "manual": {
+      "title": "Ручные тесты",
+      "yes": "Созданные вручную",
+      "no": "Автоматически создается"
+    },
+    "duration": {
+      "title": "Продолжительность испытания",
+      "label": "Номер"
+    },
+    "values": {
+      "min": "Номер",
+      "max": "Самый высокий",
+      "avg": "Среднее",
+      "down": "Значения для скачивания",
+      "up": "Загружаемые значения"
+    },
+    "failed_test": "Сбой теста",
+    "hourly": {
+      "title": "Скорость по времени суток",
+      "sample_count": "2.1 Испытания"
+    },
+    "consistency": {
+      "title": "Стабильность соединения",
+      "excellent": "Отличное",
+      "good": "Хорошо",
+      "fair": "Справедливый",
+      "poor": "Плохое",
+      "ping_variance": "Разброс пинга"
+    }
+  },
+  "calendar": {
+    "select_range": "Выберите диапазон дат",
+    "select_start": "Выберите дату начала",
+    "select_end": "Выберите дату окончания",
+    "from": "От",
+    "to": "Кому",
+    "last_7_days": "Последние 7 дней",
+    "last_30_days": "Последние 30 дней",
+    "last_90_days": "Последние 90 дней",
+    "last_year": "Прошлый год",
+    "mon": "Mon",
+    "tue": "Вт",
+    "wed": "Ср",
+    "thu": "Thu",
+    "fri": "Пт",
+    "sat": "Сб",
+    "sun": "Вс"
+  },
+  "nodes": {
+    "add": "Добавить сервер",
+    "create": "Добавить",
+    "this_server": "Этот сервер",
+    "created": "Сервер был успешно добавлен",
+    "password_required": "Для этого узла требуется пароль",
+    "update_password": "Пожалуйста, обновите пароль этого узла",
+    "password_outdated": "Пароль устарел",
+    "password_updated": "Пароль был успешно обновлен",
+    "preview_active": "Добавление и удаление серверов отключено в демо-режиме.",
+    "placeholder": {
+      "name": "Экземпляр MySpeed",
+      "url": "https://ваш-сервер.ru"
+    },
+    "group": {
+      "name": "Имя сервера",
+      "url": "Адрес сервера"
+    },
+    "delete": {
+      "title": "Удалить сервер",
+      "description": "Сервер <Bold>{{name}}</Bold> (#{{id}}) удален. Это действие нельзя отменить. Вы хотите продолжить?",
+      "yes": "Да, удалить",
+      "success": "Сервер был успешно удален"
+    },
+    "rename": {
+      "title": "Переименовать сервер",
+      "placeholder": "Имя нового сервера",
+      "success": "Сервер успешно переименован"
+    },
+    "messages": {
+      "not_reachable": "Сервер недоступен",
+      "password_changed": "Пароль был изменен",
+      "tests_pending": "Результаты испытаний ожидаются"
+    }
+  },
+  "preview": {
+    "title": "Демо-режим",
+    "info": "DEMO",
+    "description": "Сейчас ты находишься в демо-режиме. Некоторые функции отключены, а некоторые настройки нельзя изменить. Если ты хочешь использовать все возможности, то можешь <Link>установить MySpeed</Link> на свой собственный сервер."
+  },
+  "integrations": {
+    "none_active": "Эта интеграция не активна. <br/><Bold>Добавить</Bold>",
+    "preview_active": "Интеграции отключены во время демо-режима.",
+    "display_name": "Имя интеграции",
+    "create": "Добавить",
+    "activity": {
+      "never_executed": "Никогда не казнен",
+      "last_run": "Последний перед "
+    },
+    "discord": {
+      "title": "Discord",
+      "fields": {
+        "url": "URL Webhook",
+        "url_placeholder": "https://discord.com/api/webhooks/...",
+        "display_name": "Отображаемое имя",
+        "display_name_placeholder": "Уведомление MySpeed",
+        "error_message": "Сообщение об ошибке",
+        "error_message_placeholder": "[%year%-%month%-%day% %hour%:%minute%] Ошибка: %error%",
+        "send_failed": "Отправка сообщений об ошибках",
+        "send_finished": "Отправить заполненный",
+        "finished_message": "Завершенное сообщение",
+        "finished_message_placeholder": "%year%-%month%-%day% %hour%:%minute% — %ping% ms, %download% Mbps, %upload% Mbps"
+      }
+    },
+    "gotify": {
+      "title": "Gotify",
+      "fields": {
+        "url": "Server-URL",
+        "key": "Токен приложения",
+        "priority": "Приоритет",
+        "error_message": "Сообщение об ошибке",
+        "error_message_placeholder": "[%year%-%month%-%day% %hour%:%minute%] Ошибка: %error%",
+        "send_failed": "Отправка сообщений об ошибках",
+        "send_finished": "Отправить заполненный",
+        "finished_message": "Завершенное сообщение",
+        "finished_message_placeholder": "%year%-%month%-%day% %hour%:%minute% — %ping% ms, %download% Mbps, %upload% Mbps"
+      }
+    },
+    "pushover": {
+      "title": "Pushover",
+      "fields": {
+        "token": "Прикладной токен",
+        "user_key": "Ключ пользователя",
+        "error_message": "Сообщение об ошибке",
+        "error_message_placeholder": "[%year%-%month%-%day% %hour%:%minute%] Ошибка: %error%",
+        "send_failed": "Отправляй сообщения об ошибках",
+        "send_finished": "Отправляйте готовые сообщения",
+        "finished_message": "Готовое сообщение",
+        "finished_message_placeholder": "%year%-%month%-%day% %hour%:%minute% — %ping% ms, %download% Mbps, %upload% Mbps"
+      }
+    },
+    "healthChecks": {
+      "title": "HealthChecks",
+      "fields": {
+        "url": "Проверка здоровья URL",
+        "url_placeholder": "https://hc-ping.com/<uuid>",
+        "interval": "Интервал пинга (минуты)",
+        "interval_placeholder": "1"
+      }
+    },
+    "influxdb": {
+      "title": "InfluxDB",
+      "fields": {
+        "url": "URL сервера",
+        "url_placeholder": "http://localhost:8086",
+        "org": "Организация",
+        "bucket": "Ведро",
+        "token": "API token",
+        "measurement": "Название измерения",
+        "measurement_placeholder": "тесты (по умолчанию)",
+        "host": "Тег хоста",
+        "host_placeholder": "По умолчанию имя хоста",
+        "tags": "Дополнительные теги",
+        "tags_placeholder": "регион=eu,role=первичный (через запятую)"
+      }
+    },
+    "ntfy": {
+      "title": "ntfy",
+      "fields": {
+        "url": "URL сервера",
+        "url_placeholder": "https://ntfy.sh",
+        "topic": "Тема",
+        "topic_placeholder": "мистики-оповещения",
+        "token": "Маркер доступа",
+        "token_placeholder": "tk_... (необязательно, для защищенных серверов)",
+        "title": "Заголовок уведомления",
+        "title_placeholder": "MySpeed (опционально)",
+        "tags": "Теги",
+        "tags_placeholder": "предупреждение, спутник (через запятую)",
+        "priority": "Приоритет по умолчанию (1-5)",
+        "priority_placeholder": "3",
+        "error_priority": "Приоритет ошибок (1-5)",
+        "error_priority_placeholder": "5",
+        "error_message": "Сообщение об ошибке",
+        "error_message_placeholder": "[%year%-%month%-%day% %hour%:%minute%] Ошибка: %error%",
+        "send_failed": "Отправить сообщения об ошибках",
+        "send_finished": "Отправлять завершенные сообщения",
+        "finished_message": "Сообщение завершено",
+        "finished_message_placeholder": "%year%-%month%-%day% %hour%:%minute% — %ping% ms, %download% Mbps, %upload% Mbps"
+      }
+    },
+    "telegram": {
+      "title": "Telegram",
+      "fields": {
+        "token": "Токен бота",
+        "chat_id": "Идентификатор чата",
+        "error_message": "Сообщение об ошибке",
+        "error_message_placeholder": "[%year%-%month%-%day% %hour%:%minute%] Ошибка: %error%",
+        "send_failed": "Отправка сообщений об ошибках",
+        "send_finished": "Отправить заполненный",
+        "finished_message": "Завершенное сообщение",
+        "finished_message_placeholder": "%year%-%month%-%day% %hour%:%minute% — %ping% ms, %download% Mbps, %upload% Mbps"
+      }
+    },
+    "webhook": {
+      "title": "Webhook",
+      "fields": {
+        "url": "URL Webhook",
+        "url_placeholder": "https://ваш-сервер.ru/hook",
+        "send_started": "Начатая отправка",
+        "send_failed": "Отправка сообщений об ошибках",
+        "send_finished": "Отправить заполненный",
+        "send_alive": "Отправляйте живые сообщения",
+        "send_recommendations": "Отправить рекомендации",
+        "send_config_updates": "Отправка обновлений конфигурации",
+        "interval": "Интервал хранения в прямом эфире (минут)",
+        "interval_placeholder": "1"
+      }
+    }
+  },
+  "common": {
+    "back_to_top": "Вернуться к началу"
+  },
+  "not_found": {
+    "title": "Страница не найдена",
+    "description": "Страница, которую вы ищете, не существует или была перемещена.",
+    "back_home": "Назад на главную"
+  },
+  "route_error": {
+    "title": "Ой!",
+    "subtitle": "Что-то пошло не так",
+    "description": "Произошла непредвиденная ошибка. Пожалуйста, попробуйте снова или вернитесь на главную страницу.",
+    "reload": "Обновить страницу"
+  },
+  "optimal_values": {
+    "title": "Оптимальные значения",
+    "use_recommended": "Использовать рекомендованные"
+  },
+  "preferences": {
+    "title": "Настройки",
+    "theme": {
+      "title": "Внешний вид",
+      "description": "Переключение между темным и светлым интерфейсом.",
+      "dark": "Тёмная",
+      "dark_desc": "Легче на глазах в низком свете",
+      "light": "Светлая",
+      "light_desc": "Яркий поиск дневного времени"
+    },
+    "time_format": {
+      "title": "Формат времени",
+      "description": "Как часы отображаются в течение всего приложения.",
+      "h24": "24 часа",
+      "h24_desc": "Показывать время как 14:30",
+      "h12": "12 часов",
+      "h12_desc": "Показывать время как 14:30"
+    },
+    "speed_unit": {
+      "title": "Единица скорости",
+      "description": "Выберите, как показываются скорости. Значения автоматически конвертируются.",
+      "mbps": "Мбит/с (Megabits в секунду)",
+      "mbps_desc": "Стандартный ISP / единица измерения скорости",
+      "mbytes": "MB/с (Megabytes в секунду)",
+      "mbytes_desc": "Общие в браузерах и менеджерах загрузок"
+    }
+  }
+}
