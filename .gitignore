@@ -16,6 +16,9 @@
 /data/
 /bin/
 /backups/
+/certs/
+*.pem
+*.key
 /MySpeed
 /MySpeed.exe
 
