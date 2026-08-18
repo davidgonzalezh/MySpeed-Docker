@@ -1,0 +1,35 @@
+name: Validar Docker
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+# El workflow solo necesita leer el contenido del repositorio.
+permissions:
+  contents: read
+
+concurrency:
+  group: docker-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Compose e imagen
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar el repositorio
+        uses: actions/checkout@v6
+
+      - name: Validar la configuracion resuelta de Compose
+        run: docker compose --env-file .env.example config --quiet
+
+      - name: Construir la imagen sin publicarla
+        run: docker compose --env-file .env.example build
+
+      - name: Verificar usuario y etiquetas de runtime
+        run: |
+          test "$(docker image inspect myspeed:local --format '{{.Config.User}}')" = "bun"
+          test "$(docker image inspect myspeed:local --format '{{index .Config.Labels "org.opencontainers.image.licenses"}}')" = "MIT"
