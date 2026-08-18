@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Arquitectura de MySpeed Docker Classroom Edition</title>
+  <desc id="desc">Un navegador usa la IP real del servidor. Docker escucha en cero punto cero punto cero punto cero, redirige al contenedor, Express sirve la API y la SPA, y SQLite persiste en un volumen. Los binarios CLI son efimeros.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#334155"/>
+    </marker>
+    <style>
+      .title { font: 700 28px system-ui, sans-serif; fill: #0f172a; }
+      .subtitle { font: 600 17px system-ui, sans-serif; fill: #0f172a; }
+      .text { font: 15px system-ui, sans-serif; fill: #1e293b; }
+      .small { font: 13px system-ui, sans-serif; fill: #475569; }
+      .code { font: 600 14px ui-monospace, SFMono-Regular, Consolas, monospace; fill: #0f172a; }
+      .box { stroke-width: 2; rx: 16; ry: 16; }
+      .arrow { stroke: #334155; stroke-width: 2.5; fill: none; marker-end: url(#arrow); }
+      .dash { stroke: #64748b; stroke-width: 2; fill: none; stroke-dasharray: 8 7; marker-end: url(#arrow); }
+    </style>
+  </defs>
+
+  <rect width="1200" height="720" fill="#f8fafc"/>
+  <text x="600" y="44" text-anchor="middle" class="title">MySpeed: flujo Docker y persistencia</text>
+
+  <rect x="35" y="100" width="235" height="150" class="box" fill="#dbeafe" stroke="#2563eb"/>
+  <text x="152" y="133" text-anchor="middle" class="subtitle">Equipo cliente</text>
+  <text x="152" y="166" text-anchor="middle" class="text">Navegador en la LAN</text>
+  <text x="152" y="198" text-anchor="middle" class="code">http://IP_DEL_SERVIDOR</text>
+  <text x="152" y="222" text-anchor="middle" class="code">:5216</text>
+
+  <rect x="335" y="78" width="330" height="194" class="box" fill="#fef3c7" stroke="#d97706"/>
+  <text x="500" y="112" text-anchor="middle" class="subtitle">Host Docker</text>
+  <text x="500" y="145" text-anchor="middle" class="text">Publicacion predeterminada</text>
+  <text x="500" y="178" text-anchor="middle" class="code">0.0.0.0:5216 -&gt; 5216</text>
+  <text x="500" y="207" text-anchor="middle" class="small">0.0.0.0 = todas las interfaces IPv4</text>
+  <text x="500" y="233" text-anchor="middle" class="small">No es la URL del navegador</text>
+
+  <path d="M270 175 H327" class="arrow"/>
+  <text x="299" y="160" text-anchor="middle" class="small">red</text>
+
+  <rect x="725" y="70" width="440" height="370" class="box" fill="#ecfdf5" stroke="#059669"/>
+  <text x="945" y="106" text-anchor="middle" class="subtitle">Contenedor myspeed (usuario bun)</text>
+
+  <rect x="765" y="135" width="360" height="114" class="box" fill="#ffffff" stroke="#0f766e"/>
+  <text x="945" y="168" text-anchor="middle" class="subtitle">Bun 1.3.14 + Express</text>
+  <text x="945" y="199" text-anchor="middle" class="code">HTTP interno :5216</text>
+  <text x="945" y="226" text-anchor="middle" class="small">Healthcheck: http://127.0.0.1:5216/</text>
+
+  <rect x="765" y="289" width="165" height="105" class="box" fill="#e0f2fe" stroke="#0284c7"/>
+  <text x="847" y="321" text-anchor="middle" class="subtitle">API</text>
+  <text x="847" y="350" text-anchor="middle" class="code">/api/...</text>
+  <text x="847" y="374" text-anchor="middle" class="small">Backend</text>
+
+  <rect x="960" y="289" width="165" height="105" class="box" fill="#ede9fe" stroke="#7c3aed"/>
+  <text x="1042" y="321" text-anchor="middle" class="subtitle">SPA</text>
+  <text x="1042" y="350" text-anchor="middle" class="text">React/Vite</text>
+  <text x="1042" y="374" text-anchor="middle" class="code">/myspeed/build</text>
+
+  <path d="M665 175 H717" class="arrow"/>
+  <path d="M895 249 L858 281" class="arrow"/>
+  <path d="M995 249 L1032 281" class="arrow"/>
+
+  <rect x="640" y="510" width="365" height="155" class="box" fill="#f0fdf4" stroke="#16a34a"/>
+  <text x="822" y="546" text-anchor="middle" class="subtitle">Volumen nombrado myspeed-data</text>
+  <text x="822" y="579" text-anchor="middle" class="code">/myspeed/data</text>
+  <text x="822" y="609" text-anchor="middle" class="text">SQLite, configuracion, logs, certificados</text>
+  <text x="822" y="638" text-anchor="middle" class="small">Persiste al recrear el contenedor</text>
+
+  <rect x="1035" y="510" width="130" height="155" class="box" fill="#fee2e2" stroke="#dc2626"/>
+  <text x="1100" y="546" text-anchor="middle" class="subtitle">bin</text>
+  <text x="1100" y="579" text-anchor="middle" class="code">/myspeed/bin</text>
+  <text x="1100" y="609" text-anchor="middle" class="small">CLI descargados</text>
+  <text x="1100" y="635" text-anchor="middle" class="small">Efimero al</text>
+  <text x="1100" y="653" text-anchor="middle" class="small">recrear</text>
+
+  <path d="M850 394 L828 502" class="arrow"/>
+  <path d="M925 394 L1088 502" class="dash"/>
+
+  <rect x="35" y="510" width="535" height="155" class="box" fill="#fff7ed" stroke="#ea580c"/>
+  <text x="302" y="546" text-anchor="middle" class="subtitle">Acceso exterior requiere mas que 0.0.0.0</text>
+  <text x="302" y="580" text-anchor="middle" class="text">Firewall / reglas cloud / ruta o NAT</text>
+  <text x="302" y="609" text-anchor="middle" class="text">DNS, TLS y autenticacion para redes no confiables</text>
+  <text x="302" y="638" text-anchor="middle" class="small">La escucha no abre ni protege Internet automaticamente</text>
+</svg>
