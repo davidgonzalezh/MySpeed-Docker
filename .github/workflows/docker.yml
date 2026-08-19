@@ -33,3 +33,10 @@ jobs:
         run: |
           test "$(docker image inspect myspeed:local --format '{{.Config.User}}')" = "bun"
           test "$(docker image inspect myspeed:local --format '{{index .Config.Labels "org.opencontainers.image.licenses"}}')" = "MIT"
+
+      # Ejecuta la comprobacion con el USER real de la imagen (bun). Esto evita
+      # publicar una imagen en la que el backend haya quedado 0600/0700 y root-owned.
+      - name: Verificar lectura del backend como usuario bun
+        run: |
+          docker run --rm --entrypoint bun myspeed:local -e \
+            "await Bun.file('/myspeed/server/index.js').text(); console.log('runtime-readable')"
