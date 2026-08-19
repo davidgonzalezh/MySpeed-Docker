@@ -71,13 +71,17 @@ ENV NODE_ENV=production \
 
 WORKDIR /myspeed
 
-COPY --from=server-build /myspeed/server ./server
-COPY --from=server-build /myspeed/package.json ./package.json
-COPY --from=server-build /myspeed/node_modules ./node_modules
-COPY --from=client-build /client/build ./build
+# COPY conserva los permisos de los artefactos de las etapas anteriores. En un
+# host con umask restrictivo esos archivos pueden llegar como 0600/0700 y quedar
+# propiedad de root. Como el runtime se ejecuta con USER bun, se asigna bun:bun
+# explicitamente para que la imagen no dependa de los permisos del host de build.
+COPY --chown=bun:bun --from=server-build /myspeed/server ./server
+COPY --chown=bun:bun --from=server-build /myspeed/package.json ./package.json
+COPY --chown=bun:bun --from=server-build /myspeed/node_modules ./node_modules
+COPY --chown=bun:bun --from=client-build /client/build ./build
 
-# El codigo queda propiedad de root y solo los directorios que cambian en
-# ejecucion son escribibles por el usuario sin privilegios "bun".
+# Solo data/ y bin/ necesitan escritura en runtime. El codigo y las dependencias
+# son legibles por bun gracias a --chown, pero no se modifican durante ejecucion.
 RUN mkdir -p data bin \
     && chown -R bun:bun data bin
 
